@@ -1,0 +1,25 @@
+{
+  "name": "code-forensics-analysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp webserver",
+    "hotspot": "gulp hotspot-analysis --dateFrom=2022-06-01 --dateTo=2022-12-31",
+    "commit": "gulp commit-message-analysis --dateFrom=2022-06-01 --dateTo=2022-12-31 --minWordCount=1",
+    "coupling": "gulp sum-of-coupling-analysis --dateFrom=2022-06-01 --dateTo=2022-12-31",
+    "dev-effort": "gulp developer-effort-analysis --dateFrom=2022-06-01 --dateTo=2022-12-31",
+    "dev-effort-coupling": "gulp developer-coupling-analysis --dateFrom=2021-06-01 --dateTo=2022-12-31 --maxCoupledFiles=50",
+    "knowledge-map": "gulp knowledge-map-analysis --dateFrom=2022-01-01 --dateTo=2022-12-31",
+    "complexity": "gulp sloc-trend-analysis -targetFile=<targetFile>  --dateFrom=2022-06-01 --dateTo=2022-12-31",
+    "temporal-coupling": "gulp temporal-coupling-analysis -targetFile=<targetFile>  --dateFrom=2022-06-01 --dateTo=2022-12-31",
+    "evolution": "gulp system-evolution-analysis --dateFrom=2022-06-01 --dateTo=2022-12-31"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "code-forensics": "3.1.0",
+    "gulp": "^4.0.2"
+  }
+}
